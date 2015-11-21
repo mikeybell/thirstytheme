@@ -1,0 +1,15 @@
+node_modules
+style.css
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Exclude any PSD/AI source
+*.psd
+*.ai
+*.sketch
