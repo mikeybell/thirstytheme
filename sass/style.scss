@@ -56,6 +56,15 @@ body {
 	width: 100%;
 }
 
+.pad {
+	padding: 80px 0;
+}
+
+.six-col {
+	@include column(5);
+	@include push(1);
+}
+
 
 /*
 ====================================
