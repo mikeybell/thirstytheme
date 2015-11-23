@@ -1,0 +1,30 @@
+.hero {
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/hero.jpg) fixed center;
+	height: 100vh;
+	position: relative;
+	i {
+		color: white;
+		font-size: 3rem;
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.title {
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -70%);
+	p {
+		font-size: 2rem;
+	}
+}
+
+.test {
+	height: 1000px;
+}

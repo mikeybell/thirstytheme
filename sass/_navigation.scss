@@ -1,13 +1,28 @@
+$black: #000000;
+$dk-grey: #575757;
+$md-grey: #B8B8B8;
+$lt-grey: #ECECEC;
+$purple: #361162;
+
+nav {
+	padding: 30px 0;
+	background: black;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 75px;
+}
+
 ul.menu {
 	margin: 0;
-	padding: 0;
 	li {
 		display: inline;
-		margin-right: 10px;
+		margin: 0 10px;
 		a {
-			color: #333;
+			font-family: 'Roboto Slab', serif;
+			color: $lt-grey;
 			padding: 10px;
-			background: #333;
 			color: white;
 		}
 	}

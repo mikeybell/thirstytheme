@@ -6,16 +6,35 @@
 
 get_header();  ?>
 
-<div class="main">
-  <div class="container">
-    <?php // Start the loop ?>
-    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<div class="hero" id="top">
+	<div class="title">
+	  <h1><?php bloginfo( 'name' ); ?></h1>
+	  <p class="subhead"><?php bloginfo( 'description' ); ?></p>
+  	</div> <!-- /.title -->
+  	<i class="fa fa-chevron-down"></i>
+</div> <!-- /.hero -->
 
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
+<nav>
+  <?php wp_nav_menu( array(
+    'container' => false,
+    'theme_location' => 'primary'
+  )); ?>
+</nav>
 
-    <?php endwhile; // end the loop?>
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+<section class="beer" id="beer">
+	<div class="header-box">
+		<h2>Beer</h2>
+	</div> <!-- /.header-box -->
+	
+	<div class="container">
+		
+	
+	</div> <!-- /.container -->
+</section> <!-- /.beer -->
+
+
+<div class="test"></div>
+
+
 
 <?php get_footer(); ?>
