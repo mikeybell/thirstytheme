@@ -16,7 +16,8 @@ a {
 
 p {
 	font-family: 'Roboto Slab', serif;
-	line-height: 1;
+	line-height: 1.5;
+	color: $dk-grey;
 	margin: 0;
 }
 
@@ -52,7 +53,7 @@ h3::before {
 	position: absolute;
 	top: 20px;
 	left: -65px;
-	border-bottom: 1px solid $purple;
+	border-bottom: 2px dotted $purple;
 	width: 50px;
 }
 
@@ -61,7 +62,7 @@ h3::after {
 	position: absolute;
 	top: 20px;
 	right: -65px;
-	border-bottom: 1px solid $purple;
+	border-bottom: 2px dotted $purple;
 	width: 50px;
 }
 

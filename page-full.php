@@ -21,6 +21,7 @@ get_header();  ?>
   )); ?>
 </nav>
 
+
 <!-- BEER -->
 
 <section class="beer" id="beer">
@@ -28,14 +29,15 @@ get_header();  ?>
 		<h2>Beer</h2>
 	</div> <!-- /.header-box -->
 	
-	<div class="container pad beer-box">
+	<div class="container pad beer-box clearfix">
 		
-		<div class="six-col">
+		<div class="five-col-left">
 			<!-- START QUERY -->
 			<?php $beerQuery = new WP_Query(
 			  array(
 			    'post_type'=>'beer',
-			    'order'=> 'ASC'
+			    'order'=> 'ASC',
+			    'category_name'=> 'left'
 			    )
 			); ?>
 			
@@ -54,15 +56,126 @@ get_header();  ?>
 			  <?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 			<!-- END QUERY -->
-		</div> <!-- /.six-col -->
+		</div> <!-- /.five-col-left -->
 
 
+		<div class="five-col-right">
+			<!-- START QUERY -->
+			<?php $beerQuery = new WP_Query(
+			  array(
+			    'post_type'=>'beer',
+			    'order'=> 'ASC',
+			    'category_name'=> 'right'
+			    )
+			); ?>
+			
+			<!-- LOOP -->
+			<?php if ($beerQuery->have_posts()): ?>
+			  <?php while ($beerQuery->have_posts()): $beerQuery->the_post(); ?>
+			   <!-- stuff goes here -->
+			   <h3><?php the_title(); ?></h3>
+				<ul class="beer-list">
+					<?php while(has_sub_field('beer_names')): ?>
+					<li><?php the_sub_field('beer_name'); ?> - <?php the_sub_field('percentage'); ?></li>
+					<?php endwhile; ?>
+				</ul>
+
+			  <?php endwhile; ?>    
+			  <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			<!-- END QUERY -->
+		</div> <!-- /.five-col-right -->
 
 	</div> <!-- /.container -->
 </section> <!-- /.beer -->
 
 
-<div class="test"></div>
+<!-- COCKTAILS -->
+
+<section class="cocktails" id="cocktails">
+	<div class="header-box">
+		<h2>Cocktails</h2>
+	</div> <!-- /.header-box -->
+	
+	<div class="container pad cocktails-box clearfix">
+
+		<div class="five-col-left">
+			<!-- START QUERY -->
+			<?php $cocktailQuery = new WP_Query(
+			  array(
+			    'post_type'=>'cocktail',
+			    'order'=> 'ASC',
+			    'category_name'=> 'left'
+			    )
+			); ?>
+			
+			<!-- LOOP -->
+			<?php if ($cocktailQuery->have_posts()): ?>
+			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
+			   <!-- stuff goes here -->
+			   <h3><?php the_title(); ?></h3>
+		   	
+		   	<div class="cocktails-list">
+		   		<?php while(has_sub_field('cocktails')): ?>
+					<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
+					<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+				
+					<div class="cocktails-desc">
+						<p><?php the_sub_field('cocktail_desc'); ?></p>
+					</div> <!-- /.cocktails-desc -->
+
+				<?php endwhile; ?>
+				</div> <!-- /.cocktail-list -->
+
+			  <?php endwhile; ?>    
+			  <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			<!-- END QUERY -->
+		</div> <!-- /.five-col-left -->
+
+
+		<div class="five-col-right">
+			<!-- START QUERY -->
+			<?php $cocktailQuery = new WP_Query(
+			  array(
+			    'post_type'=>'cocktail',
+			    'order'=> 'ASC',
+			    'category_name'=> 'right'
+			    )
+			); ?>
+			
+			<!-- LOOP -->
+			<?php if ($cocktailQuery->have_posts()): ?>
+			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
+			   <!-- stuff goes here -->
+			   <h3><?php the_title(); ?></h3>
+		   	
+		   	<div class="cocktails-list">
+		   		<?php while(has_sub_field('cocktails')): ?>
+					<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
+					<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+				
+					<div class="cocktails-desc">
+						<p><?php the_sub_field('cocktail_desc'); ?></p>
+					</div> <!-- /.cocktails-desc -->
+
+				<?php endwhile; ?>
+				</div> <!-- /.cocktail-list -->
+
+			  <?php endwhile; ?>    
+			  <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			<!-- END QUERY -->
+		</div> <!-- /.five-col-right -->
+
+
+		
+
+
+	</div> <!-- /.container -->
+</section> <!-- /.cocktails -->
+
+
 
 
 
