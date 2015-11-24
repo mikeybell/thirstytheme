@@ -21,6 +21,12 @@ get_header();  ?>
   )); ?>
 </nav>
 
+<!-- <div class="instagram">
+	// <?php  dynamic_sidebar( 'primary-widget-area' ); ?>
+</div> <!-- /.instagram -->
+
+<div id="instafeed"></div>
+
 
 <!-- BEER -->
 
@@ -114,6 +120,7 @@ get_header();  ?>
 			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
 			   <!-- stuff goes here -->
 			   <h3><?php the_title(); ?></h3>
+			   <p class="price"><?php the_field('price'); ?></p>
 		   	
 		   	<div class="cocktails-list">
 		   		<?php while(has_sub_field('cocktails')): ?>
@@ -151,6 +158,7 @@ get_header();  ?>
 			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
 			   <!-- stuff goes here -->
 			   <h3><?php the_title(); ?></h3>
+			   <p class="price"><?php the_field('price'); ?></p>
 		   	
 		   	<div class="cocktails-list">
 		   		<?php while(has_sub_field('cocktails')): ?>
@@ -260,9 +268,38 @@ get_header();  ?>
 			<!-- END QUERY -->
 		</div> <!-- /.five-col-right -->
 
-
 	</div> <!-- /.container -->
 </section> <!-- /.food -->
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+	<div class="header-box">
+		<h2>Contact</h2>
+	</div> <!-- /.header-box -->
+	
+	<div class="container pad contact-box clearfix">
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.658042225526!2d-79.45851154929488!3d43.65528246021232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b343089df3083%3A0x56d977e4c269e360!2sThe+End!5e0!3m2!1sen!2sca!4v1448374611337" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div> <!-- /.map -->
+
+		<div class="map-right">
+			<address>
+				<p>1661 Bloor St W.</p>
+				<p>Toronto, ON</p>
+			</address>
+			<a class="email" href="mailto:info@theendbartoronto.com">info@theendbartoronto.com</a>
+			<ul class="social clearfix">
+				<li><a href="http://www.facebook.com/Theendbartoronto" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+				<li><a href="http://www.twitter.com/theendbarTO" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+				<li><a href="http://www.instagram.com/theendbarto/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			</ul> <!-- /.social -->
+
+		</div> <!-- /.map-right -->
+
+	</div> <!-- /.container -->
+</section> <!-- /.contact -->
 
 
 <?php get_footer(); ?>

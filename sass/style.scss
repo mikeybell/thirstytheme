@@ -15,11 +15,11 @@
 @import 'beer';
 @import 'cocktails';
 @import 'food';
+@import 'contact';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
 
-$black: #000000;
 $dk-grey: #575757;
 $md-grey: #B8B8B8;
 $lt-grey: #ECECEC;
@@ -43,6 +43,10 @@ img {
 body {
 	color: #333;
 	font-size: 1.6rem;
+}
+
+a, a:active, a:focus {
+   outline: none;
 }
 
 .container {

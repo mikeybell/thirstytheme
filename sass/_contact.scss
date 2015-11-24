@@ -1,0 +1,44 @@
+section.contact {
+	background: $purple;
+}
+
+.map {
+	@include column(8);
+	background: $lt-grey;
+}
+
+.map-right {
+	@include column(4);
+}
+
+address p, .map-right a {
+	font-family: "Roboto Slab", serif;
+	font-style: normal;
+	color: white;
+}
+
+address {
+	margin-bottom: 20px;
+}
+
+a.email:hover {
+	color: $md-grey;
+}
+
+.social {
+	margin-top: 30px;
+}
+
+.social .fa {
+	font-size: 4rem;
+	transition: 0.2s;
+	&:hover {
+		color: $md-grey;
+	}
+}
+
+.social li {
+	float: left;
+	margin-right: 20px;
+}
+

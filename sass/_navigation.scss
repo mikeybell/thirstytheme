@@ -24,6 +24,11 @@ ul.menu {
 			color: $lt-grey;
 			padding: 10px;
 			color: white;
+			transition: 0.2s;
+			&:hover {
+				border-bottom: 1px solid $md-grey;
+				color: $md-grey;
+			}
 		}
 	}
 }
