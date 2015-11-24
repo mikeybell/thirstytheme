@@ -117,8 +117,10 @@ get_header();  ?>
 		   	
 		   	<div class="cocktails-list">
 		   		<?php while(has_sub_field('cocktails')): ?>
-					<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
-					<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+		   		<div class="namesize">
+						<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
+						<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+					</div> <!-- /.namesize -->
 				
 					<div class="cocktails-desc">
 						<p><?php the_sub_field('cocktail_desc'); ?></p>
@@ -152,8 +154,10 @@ get_header();  ?>
 		   	
 		   	<div class="cocktails-list">
 		   		<?php while(has_sub_field('cocktails')): ?>
-					<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
-					<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+					<div class="namesize">
+						<p class="cocktail-name"><?php the_sub_field('cocktail_name'); ?></p>
+						<p class="cocktail-size"><?php the_sub_field('cocktail_size'); ?></p>
+					</div> <!-- /.namesize -->
 				
 					<div class="cocktails-desc">
 						<p><?php the_sub_field('cocktail_desc'); ?></p>
@@ -168,15 +172,97 @@ get_header();  ?>
 			<!-- END QUERY -->
 		</div> <!-- /.five-col-right -->
 
-
-		
-
-
 	</div> <!-- /.container -->
 </section> <!-- /.cocktails -->
 
 
+<!-- FOOD -->
 
+<section class="food" id="food">
+	<div class="header-box">
+		<h2>Food</h2>
+	</div> <!-- /.header-box -->
+	
+	<div class="container pad food-box clearfix">
+		
+		<div class="five-col-left">
+			<!-- START QUERY -->
+			<?php $foodQuery = new WP_Query(
+			  array(
+			    'post_type'=>'food',
+			    'order'=> 'ASC',
+			    'category_name'=> 'left'
+			    )
+			); ?>
+			
+			<!-- LOOP -->
+			<?php if ($foodQuery->have_posts()): ?>
+			  <?php while ($foodQuery->have_posts()): $foodQuery->the_post(); ?>
+			   <!-- stuff goes here -->
+			   <h3><?php the_title(); ?></h3>
+			   <p class="time"><?php the_field('time'); ?></p>
+		   	
+		   	<div class="food-list">
+		   		<?php while(has_sub_field('food')): ?>
+		   		<div class="namesize">
+						<p class="food-name"><?php the_sub_field('food_name'); ?></p>
+						<p class="food-price"><?php the_sub_field('food_price'); ?></p>
+					</div> <!-- /.namesize -->
+				
+					<div class="food-desc">
+						<p><?php the_sub_field('food_desc'); ?></p>
+					</div> <!-- /.food-desc -->
+
+				<?php endwhile; ?>
+				</div> <!-- /.food-list -->
+
+			  <?php endwhile; ?>    
+			  <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			<!-- END QUERY -->
+		</div> <!-- /.five-col-left -->
+
+
+		<div class="five-col-right">
+			<!-- START QUERY -->
+			<?php $foodQuery = new WP_Query(
+			  array(
+			    'post_type'=>'food',
+			    'order'=> 'ASC',
+			    'category_name'=> 'right'
+			    )
+			); ?>
+			
+			<!-- LOOP -->
+			<?php if ($foodQuery->have_posts()): ?>
+			  <?php while ($foodQuery->have_posts()): $foodQuery->the_post(); ?>
+			   <!-- stuff goes here -->
+			   <h3><?php the_title(); ?></h3>
+			   <p class="time"><?php the_field('time'); ?></p>
+		   	
+		   	<div class="food-list">
+		   		<?php while(has_sub_field('food')): ?>
+		   		<div class="namesize">
+						<p class="food-name"><?php the_sub_field('food_name'); ?></p>
+						<p class="food-price"><?php the_sub_field('food_price'); ?></p>
+					</div> <!-- /.namesize -->
+				
+					<div class="food-desc">
+						<p><?php the_sub_field('food_desc'); ?></p>
+					</div> <!-- /.food-desc -->
+
+				<?php endwhile; ?>
+				</div> <!-- /.food-list -->
+
+			  <?php endwhile; ?>    
+			  <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			<!-- END QUERY -->
+		</div> <!-- /.five-col-right -->
+
+
+	</div> <!-- /.container -->
+</section> <!-- /.food -->
 
 
 <?php get_footer(); ?>
