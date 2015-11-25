@@ -11,6 +11,15 @@ section.contact {
 	@include column(4);
 }
 
+.overlay {
+   background:transparent; 
+   position:relative; 
+   @include column(8);
+   height:400px; /* your iframe height */
+   top:400px;  /* your iframe height */
+   margin-top:-400px;  /* your iframe height */
+}
+
 address p, .map-right a {
 	font-family: "Roboto Slab", serif;
 	font-style: normal;
@@ -41,4 +50,6 @@ a.email:hover {
 	float: left;
 	margin-right: 20px;
 }
+
+
 
