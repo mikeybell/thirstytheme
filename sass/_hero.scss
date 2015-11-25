@@ -20,13 +20,20 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -70%);
+	width: 100%;
 	p {
 		font-size: 2rem;
 		color: white;
 	}
 }
 
+/*
+====================================
+Media Queries
+====================================
+*/
 
-.instagram {
-	height: 100%;
+@media all and (max-width: 400px) {
+
+
 }

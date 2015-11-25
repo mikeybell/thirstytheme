@@ -66,12 +66,12 @@ a, a:active, a:focus {
 	padding: 80px 0;
 }
 
-.five-col-left {
+.col-left {
 	@include column(5);
 	@include push(1);
 }
 
-.five-col-right {
+.col-right {
 	@include column(5);
 }
 
@@ -91,6 +91,40 @@ Common Elements
 }
 
 
+/*
+====================================
+Media Queries
+====================================
+*/
+
+
+@media all and (max-width: 800px) {
+	
+	.col-left {
+		@include column(6);
+	}
+
+	.col-right {
+		@include column(6);
+	}
+
+
+}
+
+@media all and (max-width: 600px) {
+	
+	.col-left {
+		@include column(10);
+		@include push(1);
+	}
+
+	.col-right {
+		@include column(10);
+		@include push(1);
+	}
+
+
+}
 
 
 

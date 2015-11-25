@@ -162,3 +162,18 @@ img {
 	float: left;
 	clear: both;
 }
+
+
+/*
+====================================
+Media Queries
+====================================
+*/
+
+@media all and (max-width: 400px) {
+
+	h1 {
+		font-size: 7rem;
+	}
+
+}

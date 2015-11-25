@@ -36,7 +36,7 @@ get_header();  ?>
 	
 	<div class="container pad beer-box clearfix">
 		
-		<div class="five-col-left">
+		<div class="col-left">
 			<!-- START QUERY -->
 			<?php $beerQuery = new WP_Query(
 			  array(
@@ -64,7 +64,7 @@ get_header();  ?>
 		</div> <!-- /.five-col-left -->
 
 
-		<div class="five-col-right">
+		<div class="col-right">
 			<!-- START QUERY -->
 			<?php $beerQuery = new WP_Query(
 			  array(
@@ -104,7 +104,7 @@ get_header();  ?>
 	
 	<div class="container pad cocktails-box clearfix">
 
-		<div class="five-col-left">
+		<div class="col-left">
 			<!-- START QUERY -->
 			<?php $cocktailQuery = new WP_Query(
 			  array(
@@ -142,7 +142,7 @@ get_header();  ?>
 		</div> <!-- /.five-col-left -->
 
 
-		<div class="five-col-right">
+		<div class="col-right">
 			<!-- START QUERY -->
 			<?php $cocktailQuery = new WP_Query(
 			  array(
@@ -192,7 +192,7 @@ get_header();  ?>
 	
 	<div class="container pad food-box clearfix">
 		
-		<div class="five-col-left">
+		<div class="col-left">
 			<!-- START QUERY -->
 			<?php $foodQuery = new WP_Query(
 			  array(
@@ -230,7 +230,7 @@ get_header();  ?>
 		</div> <!-- /.five-col-left -->
 
 
-		<div class="five-col-right">
+		<div class="col-right">
 			<!-- START QUERY -->
 			<?php $foodQuery = new WP_Query(
 			  array(
@@ -295,6 +295,7 @@ get_header();  ?>
 				<li><a href="http://www.twitter.com/theendbarTO" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
 				<li><a href="http://www.instagram.com/theendbarto/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 			</ul> <!-- /.social -->
+	
 
 		</div> <!-- /.map-right -->
 
