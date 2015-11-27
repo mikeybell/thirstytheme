@@ -1,5 +1,19 @@
 //load in jQuery plugin dependencies (eg. flexslider, smoothScroll etc.) in this file
 
+
+//Custom sticky nav
+function stickyRelocate() {
+    var windowTop = $(window).scrollTop();
+    var divTop = $('#sticky-anchor').offset().top;
+    if (windowTop > divTop) {
+        $('nav').addClass('stick');
+    } else {
+        $('nav').removeClass('stick');
+    }
+}
+
+
+
 /*
  Sticky-kit v1.1.2 | WTFPL | Leaf Corcoran 2015 | http://leafo.net
 */

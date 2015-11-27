@@ -14,16 +14,15 @@ get_header();  ?>
   	<i class="fa fa-chevron-down"></i>
 </div> <!-- /.hero -->
 
+<div id="sticky-anchor"></div>
 <nav>
+	<p class="logo">The End</p>
+	<p class="burger">Menu &#9776;</p>
   <?php wp_nav_menu( array(
     'container' => false,
     'theme_location' => 'primary'
   )); ?>
 </nav>
-
-<!-- <div class="instagram">
-	// <?php dynamic_sidebar( 'primary-widget-area' ); ?>
-</div> <!-- /.instagram -->
 
 
 
