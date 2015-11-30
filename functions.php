@@ -70,6 +70,22 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+
+  wp_enqueue_script(
+    'google-map', //handle
+    'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', //source
+    array(), 
+    '3', 
+    true
+  );
+
+  wp_enqueue_script(
+    'google-map-init', //handle
+    get_template_directory_uri() . '/js/google-maps.js', //source
+    array('google-map', 'jquery'), 
+    '0.1', 
+    true
+  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );

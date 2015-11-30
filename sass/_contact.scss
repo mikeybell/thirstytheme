@@ -2,8 +2,9 @@ section.contact {
 	background: $purple;
 }
 
-.map {
+.acf-map {
 	@include column(8);
+   height: 400px;
 }
 
 .map-right {
@@ -13,10 +14,12 @@ section.contact {
 .overlay {
    background:transparent; 
    position:relative; 
-   width: 100%;
+   z-index: 9999;
+   @include column(8);
    margin: 0;
    height:400px; /* your iframe height */
    top:400px;  /* your iframe height */
+   left: 21px;
    margin-top:-400px;  /* your iframe height */
 }
 
@@ -52,6 +55,8 @@ a.email:hover {
 }
 
 
+
+
 /*
 ====================================
 Media Queries
@@ -59,8 +64,13 @@ Media Queries
 */
 
 @media all and (max-width: 720px) {
-	.map {
+	.acf-map {
 		@include column(12);
+	}
+
+	.overlay {
+		@include column(12);
+		margin: -400px 0 0 0;
 	}
 
 	.map-right {
