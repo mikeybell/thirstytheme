@@ -23,7 +23,7 @@ nav.stick {
 p.logo {
 	position: absolute;
 	top: 15px;
-	left: 40px;
+	left: 30px;
 	font-size: 3rem;
 	color: white;
 	display: none;
@@ -67,6 +67,13 @@ Media Queries
 
 }
 
+
+@media all and (max-width: 768px) {
+	nav {
+		position: fixed;
+		top: 0;
+	}
+}
 
 @media all and (max-width: 640px) {
 

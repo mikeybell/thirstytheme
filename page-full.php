@@ -49,7 +49,7 @@ get_header();  ?>
 			<?php if ($beerQuery->have_posts()): ?>
 			  <?php while ($beerQuery->have_posts()): $beerQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 				<ul class="beer-list">
 					<?php while(has_sub_field('beer_names')): ?>
 					<li><?php the_sub_field('beer_name'); ?> - <?php the_sub_field('percentage'); ?></li>
@@ -77,7 +77,7 @@ get_header();  ?>
 			<?php if ($beerQuery->have_posts()): ?>
 			  <?php while ($beerQuery->have_posts()): $beerQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 				<ul class="beer-list">
 					<?php while(has_sub_field('beer_names')): ?>
 					<li><?php the_sub_field('beer_name'); ?> - <?php the_sub_field('percentage'); ?></li>
@@ -117,7 +117,7 @@ get_header();  ?>
 			<?php if ($cocktailQuery->have_posts()): ?>
 			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 			   <p class="price"><?php the_field('price'); ?></p>
 		   	
 		   	<div class="cocktails-list">
@@ -155,7 +155,7 @@ get_header();  ?>
 			<?php if ($cocktailQuery->have_posts()): ?>
 			  <?php while ($cocktailQuery->have_posts()): $cocktailQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 			   <p class="price"><?php the_field('price'); ?></p>
 		   	
 		   	<div class="cocktails-list">
@@ -205,7 +205,7 @@ get_header();  ?>
 			<?php if ($foodQuery->have_posts()): ?>
 			  <?php while ($foodQuery->have_posts()): $foodQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 			   <p class="time"><?php the_field('time'); ?></p>
 		   	
 		   	<div class="food-list">
@@ -243,7 +243,7 @@ get_header();  ?>
 			<?php if ($foodQuery->have_posts()): ?>
 			  <?php while ($foodQuery->have_posts()): $foodQuery->the_post(); ?>
 			   <!-- stuff goes here -->
-			   <h3><?php the_title(); ?></h3>
+			   <div class="overflow"><h3><?php the_title(); ?></h3></div>
 			   <p class="time"><?php the_field('time'); ?></p>
 		   	
 		   	<div class="food-list">

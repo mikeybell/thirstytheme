@@ -1,6 +1,7 @@
 <footer>
   <div class="container pad">
   	<p>&copy; The End <?php echo date('Y'); ?></p>
+  	<p class="mike">Designed and coded by <a href="http://www.mikedoesstuff.com" target="_blank">Mike Bell</a>.</p>
   </div>
 </footer>
 
